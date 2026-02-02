@@ -13,14 +13,20 @@ main {
     align-items: flex-start;
 }
 
-/* Text column: take most of the width and keep text centered in that column */
 .song-text {
     flex: 2;
 }
 
-/* Optional: center the heading text */
-.song-text h2 {
-    text-align: center;
+/* Text column: take most of the width and keep text centered in that column */
+/* Main album page heading */
+.song-text h1 {
+    flex: 2;
+    color: var(--Color9);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -0.02em;
 }
 
 /* Reuse cover-art size but make sure it fits nicely here */

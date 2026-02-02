@@ -33,7 +33,7 @@ header {
     flex-direction: column;
 }
 
-h1 {
+.logo {
     font-family: 'Catallina', sans-serif;
     font-size: 48px;
     margin: 0;
