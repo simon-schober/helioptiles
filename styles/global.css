@@ -1,0 +1,224 @@
+:root {
+    --BackgroundColor: #051207;
+    --CardBackground: #11311F;
+    --OverlayCardBackground: #1C4E3A;
+    --Color4: #286C59;
+    --SuccessColor: #338A7B;
+    --LinkBackgroundColor: #40A9A1;
+    --LinkHoverBackgroundColor: #53C8C9;
+    --ItalicColor: #84E4EE;
+    --Color9: #DDF6FC;
+    --LightTextColor: #FFFFFF;
+}
+
+@font-face {
+    font-family: 'Catallina';
+    src: url('../fonts/Catallina.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Shows fallback text while font loads */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: var(--BackgroundColor);
+}
+
+header {
+    background-color: var(--CardBackground);
+    border-radius: 2rem;
+    padding: 0.1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Catallina', sans-serif;
+    font-size: 48px;
+    margin: 0;
+    line-height: 1;
+    align-self: flex-start;
+    padding-left: 1.3rem;
+}
+
+footer {
+    background-color: var(--CardBackground);
+    color: var(--Color9);
+    border-radius: 5rem;
+    padding: 0.1rem;
+}
+
+section {
+    background-color: var(--CardBackground);
+}
+
+main {
+    background-color: var(--CardBackground);
+    border-radius: 2rem;
+    padding: 0rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+nav {
+    border-radius: 5rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--OverlayCardBackground);
+}
+
+p {
+    color: var(--LightTextColor);
+}
+
+a:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(64, 169, 161, 0.3);
+}
+
+a:active {
+    transform: translateY(0);
+}
+
+
+b {
+    color: var(--LinkHoverBackgroundColor);
+}
+
+i {
+    color: var(--ItalicColor);
+}
+
+.success {
+    color: var(--SuccessColor);
+}
+
+.disabled {
+    color: var(--OverlayCardBackground);
+}
+
+input, textarea, select {
+    color: var(--CardBackground);
+    border-color: var(--CardBackground);
+    border: 0.1rem solid;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: var(--LinkBackgroundColor);
+    text-decoration: none;
+    margin-left: 1px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: 2px solid var(--OverlayCardBackground);
+}
+
+/* Buttons */
+a, .btn-primary {
+    color: var(--CardBackground);
+    border-color: var(--CardBackground);
+    border: 0.1rem solid;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: var(--LinkBackgroundColor);
+    text-decoration: none;
+    margin-left: 1px;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3),
+    0 0 12px rgba(64, 169, 161, 0.3);
+}
+
+.btn-secondary {
+    color: var(--CardBackground);
+    border-color: var(--LinkHoverBackgroundColor);
+    border: 0.1rem solid;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: var(--SuccessColor);
+    text-decoration: none;
+    margin-left: 1px;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3),
+    0 0 12px rgba(64, 169, 161, 0.3);
+}
+
+.btn-primary:active {
+    color: var(--CardBackground);
+    border-color: var(--CardBackground);
+    border: 0.1rem solid;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: var(--LinkBackgroundColor);
+    text-decoration: none;
+    margin-left: 1px;
+    transform: translateY(0);
+}
+
+.btn-secondary:active {
+    color: var(--CardBackground);
+    border-color: var(--CardBackground);
+    border: 0.1rem solid;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: var(--LinkBackgroundColor);
+    text-decoration: none;
+    margin-left: 1px;
+    transform: translateY(0);
+}
+
+/* Songlist */
+.songlist-flexbox {
+    display: grid;
+    gap: 1rem; /* your gap on the bottom */
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(160px, 1fr)
+    );
+
+    justify-items: start;
+    padding: 1rem;
+}
+
+.song {
+    width: 10rem;
+    height: auto;
+    border: 0.1rem solid var(--BackgroundColor);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: pointer;
+}
+
+.song:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(64, 169, 161, 0.3);
+}
+
+.cover-art {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+}
+
+.title {
+    width: 10rem;
+    height: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}

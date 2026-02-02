@@ -1,0 +1,188 @@
+:root {
+    --BackgroundColor: #051207;
+    --CardBackground: #11311F;
+    --OverlayCardBackground: #1C4E3A;
+    --Color4: #286C59;
+    --SuccessColor: #338A7B;
+    --LinkBackgroundColor: #40A9A1;
+    --LinkHoverBackgroundColor: #53C8C9;
+    --ItalicColor: #84E4EE;
+    --Color9: #DDF6FC;
+    --LightTextColor: #FFFFFF;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: var(--BackgroundColor);
+    margin: 0;
+    padding: 20px;
+}
+
+/* ALBUM.CSS STYLES START HERE */
+
+/* Main album page heading */
+main h1 {
+    color: var(--Color9);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 2rem 2rem 1rem 2rem;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+/* Audio list container */
+.audio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+/* Individual audio item */
+.audio-item {
+    background-color: var(--OverlayCardBackground);
+    border: 1px solid var(--Color4);
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.audio-item:hover {
+    background-color: var(--Color4);
+    box-shadow: 0 4px 12px rgba(64, 169, 161, 0.2);
+    transform: translateX(4px);
+}
+
+/* Audio title */
+.audio-title {
+    color: var(--Color9);
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+/* Audio controls container */
+.audio-controls {
+    width: 100%;
+}
+
+/* Style the audio element */
+audio {
+    width: 100%;
+    height: 40px;
+    border-radius: 0.75rem;
+    outline: none;
+}
+
+/* Custom audio player styling */
+audio::-webkit-media-controls-panel {
+    background-color: var(--CardBackground);
+    border-radius: 0.75rem;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: var(--LinkBackgroundColor);
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+    background-color: var(--LinkHoverBackgroundColor);
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: var(--ItalicColor);
+    font-size: 0.875rem;
+}
+
+audio::-webkit-media-controls-timeline {
+    background-color: var(--OverlayCardBackground);
+    border-radius: 1rem;
+    margin: 0 0.5rem;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    background-color: var(--OverlayCardBackground);
+    border-radius: 1rem;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: transparent;
+}
+
+/* Firefox custom controls */
+audio::-moz-range-track {
+    background-color: var(--OverlayCardBackground);
+    border-radius: 1rem;
+}
+
+audio::-moz-range-thumb {
+    background-color: var(--LinkBackgroundColor);
+    border: none;
+    border-radius: 50%;
+}
+
+audio::-moz-range-thumb:hover {
+    background-color: var(--LinkHoverBackgroundColor);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 2rem;
+        padding: 1.5rem 1.5rem 0.75rem 1.5rem;
+    }
+
+    .audio-list {
+        padding: 0.75rem 1.5rem 1.5rem 1.5rem;
+        gap: 0.5rem;
+    }
+
+    .audio-item {
+        padding: 0.875rem 1rem;
+    }
+
+    .audio-title {
+        font-size: 0.9375rem;
+    }
+
+    audio {
+        height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    main h1 {
+        font-size: 1.75rem;
+        padding: 1.25rem 1rem 0.5rem 1rem;
+    }
+
+    .audio-list {
+        padding: 0.5rem 1rem 1rem 1rem;
+    }
+
+    .audio-item {
+        padding: 0.75rem 0.875rem;
+    }
+
+    .audio-title {
+        font-size: 0.875rem;
+    }
+}
+
+/* ALBUM.CSS STYLES END HERE */
+
+/* Demo container */
+.demo-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--CardBackground);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+</style>
